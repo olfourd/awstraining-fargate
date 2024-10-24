@@ -1,6 +1,7 @@
 name: Hello world
 run-name: Hello ${{ inputs.name }} run
 
+
 on:
   workflow_dispatch:
     inputs:

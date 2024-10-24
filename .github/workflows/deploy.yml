@@ -66,6 +66,7 @@ jobs:
       DESTINATION_AWS_SECRET: ${{ secrets[format('{0}_AWS_SECRET', github.event.inputs.destinationHubEnv)] }}
       SMOKETEST_BACKEND_PASSWORD: ${{ secrets[format('{0}_SMOKETEST_BACKEND_PASSWORD', github.event.inputs.destinationHubEnv)] }}
 
+
     steps:
       - name: Display info about the current deployment # in GitHub 3.8 can be replaced by run-name...
         run: |

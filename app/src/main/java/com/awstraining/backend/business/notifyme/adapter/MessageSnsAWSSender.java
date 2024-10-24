@@ -26,6 +26,7 @@ public class MessageSnsAWSSender implements MessageSender {
 
   @Override
   public void send(String text) {
+    LOGGER.info(String.format("TopicARN: %s", this.topicArn));
     PublishRequest publishRequest = new PublishRequest(topicArn, text);
     PublishResult publishResult = amazonSNS.publish(publishRequest);
     String messageId = publishResult.getMessageId();
